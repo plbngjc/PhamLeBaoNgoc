@@ -1,4 +1,4 @@
-# AI Usage Log
+# AI Usage LMS1 
 ## 1. Công cụ AI
 Tên công cụ: ChatGPT
 
@@ -71,3 +71,46 @@ Giải thích cách chạy trang web và những phần tôi cần kiểm tra.
   - position: sticky; top: 0: giữ thanh điều hướng cố định ở đầu màn hình khi cuộn. z-index: 30 đặt thanh điều hướng nằm trên header và các menu.
 - scroll-padding-top: 60px trên html: chừa chỗ cho thanh điều hướng, nên tiêu đề không bị che khi bấm "Video ngắn" hay "Sản phẩm".
 - aspect-ratio: 9 / 16: giữ khung video dọc ở mọi kích thước. Lưới video là 4 cột trên máy tính và 2 cột trên màn hình dưới 950px.
+
+# AI Usage LMS2
+# AI Usage Log — Bài tập cá nhân tuần 2
+
+## Công cụ
+
+- **AI sử dụng:** Claude.ai (mức effort: Medium), dùng xuyên suốt bài tập tuần 2.
+- **Phạm vi:** AI hỗ trợ phân tích, giải thích và đề xuất mã. Mọi đề xuất đều được kiểm tra trên trình duyệt trước khi đưa vào repository.
+
+## Nhật ký theo từng bước
+
+| Bước | Nội dung | AI hỗ trợ gì | Em kiểm tra / tự làm gì |
+|---|---|---|---|
+| 1 | Rà soát trang kế thừa từ buổi 1 | Chỉ ra 3 vấn đề: (1) liên kết và `id` chưa hợp lý (giỏ hàng dẫn sai nội dung, ảnh và tên sản phẩm chưa dẫn đến trang chi tiết); (2) hộp gợi ý tìm kiếm chỉ có CSS, chưa nhập được từ khóa, cấu trúc và khả năng tiếp cận hạn chế; (3) CSS khó bảo trì (`font-size: 0` + `::first-letter`), cỡ chữ nhỏ, lỗi hiển thị chữ tiếng Việt, `:focus-visible` chưa đồng nhất. Đề xuất dùng `nav`, `ul/li` hoặc `datalist`, Flexbox, `span`, `rem` | Đối chiếu từng vấn đề với trang thực tế; xem chi tiết ở mục "Đề xuất AI đã điều chỉnh" bên dưới |
+| 2 | Củng cố HTML5 ngữ nghĩa | Giải thích các nhóm thẻ: cấu trúc cơ bản, bố cục (`header`, `nav`, `main`, `section`, `article`, `footer`), văn bản và tiêu đề, liên kết và danh sách, biểu mẫu (`form`, `label`, `input`, `button`, `details`, `summary`), hình ảnh, các thuộc tính hỗ trợ (`aria-*`, `loading="lazy"`) | Gắn từng thẻ với vị trí cụ thể trong mã nguồn của bài; trả lời 4 câu tự kiểm tra bằng cách hiểu và diễn đạt lại |
+| 4 | CSS selector và Box Model | Hướng dẫn áp dụng `margin`, `padding`, `border`, class selector cho thẻ sản phẩm | Áp dụng lên sản phẩm của bài, quan sát kết quả trên trình duyệt |
+| 5 | Flexbox cơ bản | Chỉnh bố cục bằng `display: flex`, `justify-content`, `align-items`, `gap` | So sánh giao diện trước và sau khi chỉnh; tự trả lời 3 câu hỏi kiểm tra |
+| 6 | CSS Grid cho danh sách sản phẩm | Hỗ trợ bố cục lưới: 4 cột trên máy tính, 2 cột trên điện thoại | Kiểm tra hiển thị ở hai kích thước màn hình |
+| 7 | Hover và focus | Bổ sung hiệu ứng hover cho nút "Thêm vào giỏ" và `:focus-visible` khi dùng phím Tab | Thử bằng chuột và phím Tab để xác nhận hiệu ứng hoạt động |
+
+## Đề xuất AI đã điều chỉnh
+
+- **Đề xuất (Bước 1):** Bỏ kỹ thuật `font-size: 0` kết hợp `::first-letter`, thay bằng Flexbox, thẻ `span` và đơn vị `rem`.
+- **Cách kiểm tra:** Mở trang trên trình duyệt, thu nhỏ và phóng to cửa sổ, dùng phím Tab để xem `:focus-visible`.
+- **Phát hiện:** Một số đoạn chữ tiếng Việt vẫn hiển thị chưa đúng và cỡ chữ ở vài vị trí còn nhỏ.
+- **Xử lý:** Không áp dụng nguyên văn. Tự chỉnh lại giá trị `rem` và màu sắc để đủ độ tương phản trước khi đưa vào bài.
+- **Bài học:** Mã do AI đề xuất có thể đúng về hướng nhưng vẫn cần kiểm thử thực tế và chỉnh theo bài của mình.
+
+## Phần do em tự thực hiện
+
+- Sắp xếp lại cấu trúc thư mục trên repository.
+- Thêm responsive cho giao diện điện thoại.
+- Điều chỉnh `rem`, màu sắc và độ tương phản sau khi kiểm tra.
+- Kiểm tra thủ công theo checklist Bước 8 (mở trang, áp dụng CSS, hình ảnh, liên kết, bố cục, hover/focus): tất cả đạt.
+
+## Liên kết hội thoại với AI
+
+- Bước 1: https://claude.ai/share/264a2a50-bc09-4d31-9188-62f1a3ba3503
+- Bước 2: https://claude.ai/share/90cb506a-a54e-4abc-aacb-19ff89982bee
+- Bước 4: https://claude.ai/share/c869f676-6f75-4756-8ffc-c799c4f35714
+- Bước 5: https://claude.ai/share/4016634a-d29b-4518-80f2-a753d50cd21f
+- Bước 6: https://chatgpt.com/s/t_6ad37824f2208191ae763dffdf90108c
+- Bước 7: https://chatgpt.com/s/t_6ad37824f2208191ae763dffdf90108c
