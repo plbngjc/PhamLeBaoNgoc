@@ -1,0 +1,16 @@
+  ul {
+    list-style: none;   /* bỏ dấu chấm đầu dòng */
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    display: inline-block;      /* các <li> nằm ngang nhưng vẫn đặt được width/height */
+    width: 180px;
+    height: 46px;
+    line-height: 46px;          /* căn chữ giữa theo chiều dọc */
+    text-align: center;         /* căn chữ giữa theo chiều ngang */
+    background-color: #00FFFF;     
+    margin-right: 10px;         /* khoảng cách giữa các ô */
+    font-size: 24px;
+  }

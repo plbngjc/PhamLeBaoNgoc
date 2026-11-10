@@ -1,0 +1,86 @@
+/* i. Khung chứa lớn: 960px; margin; font-size; background; padding */
+#root {
+  width: 960px;
+  margin: 30px auto;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #cccccc;
+  font-family: "Times New Roman", serif;
+  font-size: 16px;
+}
+
+/* Tiêu đề */
+.header {
+  text-align: center;
+  font-size: 28px;
+  margin: 10px 0 30px 0;
+}
+
+/* Đoạn mô tả: dùng chung cho đoạn đầu và các đoạn trong từng hero */
+.description {
+  background-color: rgba(0, 0, 0, 0.5);   /* nền đen mờ */
+  border: 2px solid #ffffff;
+  border-radius: 12px;
+  margin: 0;
+}
+
+/* Đoạn mô tả đầu trang */
+#root > .description {
+  padding: 15px 55px;
+  font-size: 15px;
+  line-height: 1.3;
+  margin-bottom: 40px;
+}
+
+.container {
+  text-align: center;
+}
+
+.remark {
+  font-size: 15px;
+  margin: 0 0 35px 0;
+}
+
+/* Danh sách 4 hero nằm ngang */
+.heroes-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.hero-item {
+  width: 205px;
+}
+
+.hero-item h2 {
+  font-size: 17px;
+  margin: 0 0 20px 0;
+}
+
+/* Khung mô tả nằm đè lên ảnh */
+.hero-item .description {
+  position: relative;
+  z-index: 2;                  /* nổi lên trên ảnh */
+  height: 225px;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  text-align: justify;
+  font-size: 16px;
+  line-height: 1.4;
+  overflow: hidden;
+}
+
+/* Ảnh nằm dưới, bị khung mô tả che một phần phía trên */
+.hero-item img {
+  display: block;
+  width: 193px;
+  height: 193px;
+  object-fit: cover;
+  border-radius: 20px;
+  margin: -75px 0 0 -38px;     /* kéo ảnh lên dưới khung mô tả, lệch trái như mẫu */
+  position: relative;
+  z-index: 1;
+}

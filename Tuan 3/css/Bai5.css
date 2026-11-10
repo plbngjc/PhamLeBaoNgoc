@@ -1,0 +1,47 @@
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+  }
+
+  .best-shared {
+    text-align: center;        /* căn giữa logo, tiêu đề, đoạn văn và nút */
+    padding: 40px 20px;
+  }
+
+  h2 {
+    font-size: 44px;
+    font-weight: normal;       /* "Best" và "Company" là chữ thường */
+    color: #2b2f33;
+    margin: 20px 0;
+  }
+
+  h2 strong {
+    color: #00a8e8;            /* "Shared Hosting" in đậm, màu xanh dương */
+  }
+
+  .lead-text {
+    font-size: 14px;
+    color: #444;
+  }
+
+  .btn-list {
+    list-style: none;          /* bỏ dấu chấm đầu dòng */
+    padding: 0;
+    margin-top: 40px;
+  }
+
+  .btn-list li {
+    display: inline-block;     /* hai nút nằm ngang, đặt được kích thước */
+    margin: 0 10px;
+  }
+
+  .btn-list a {
+    display: inline-block;     /* để thẻ <a> có padding như một nút */
+    width: 160px;
+    padding: 18px 0;
+    background-color: #2b2f33; /* nền xám đen */
+    color: #fff;
+    text-decoration: none;     /* bỏ gạch chân */
+    font-size: 14px;
+    border-radius: 3px;
+  }
