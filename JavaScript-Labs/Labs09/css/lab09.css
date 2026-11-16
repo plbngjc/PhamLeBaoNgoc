@@ -42,20 +42,24 @@
 }
 
 .makeItGray {
-  -webkit-filter: grayscale(100%); 
-  filter: grayscale(100%)
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
   -webkit-transition: -webkit-filter 1.5s;
+  transition: filter 1.5s;
 }
 
 .makeItNormal {
   -webkit-filter: none;
-    filter: none;
+  filter: none;
   -webkit-transition: -webkit-filter 1.5s;
+  transition: filter 1.5s;
 }
 
 .makeItDisappear {
-  -webkit-filter: opacity(0);    
-  -webkit-transition: -webkit-filter 1.5s; 
+  -webkit-filter: opacity(0);
+  filter: opacity(0);
+  -webkit-transition: -webkit-filter 1s;
+  transition: filter 1s;
 }
 
 /* styles for debugging example */

@@ -9,4 +9,14 @@ function outputBox(num) {
    return box;
 }
 
-/* your code goes here */
+window.addEventListener("load", function () {
+    var firstDiv = document.getElementById("div1");
+    alert(firstDiv.innerHTML);
+
+    var divs = document.querySelectorAll(".movingDiv");
+    for (var i = 0; i < divs.length; i++) {
+        divs[i].addEventListener("mouseover", function (event) {
+            alert("triggered by " + event.target.id);
+        });
+    }
+});
