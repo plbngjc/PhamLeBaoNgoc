@@ -1,12 +1,16 @@
 var isCanadian = true;
 
-function calculateTax(amount, taxRate) {
-    return amount * taxRate();
+function calculateTax(amount, tax) {
+    return amount * tax();
 }
 
 function calculateTotal(price, quantity) {
     var amount = price * quantity;
     return amount + calculateTax(amount, function () {
-        return isCanadian ? 0.05 : 0;
+        if (isCanadian) {
+            return 0.05;
+        } else {
+            return 0.0;
+        }
     });
 }

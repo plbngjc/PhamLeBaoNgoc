@@ -3,6 +3,8 @@ var daysOfWeek = new Array("Mon", "Tues", "Wed", "Thur", "Fri");
 daysOfWeek.push("Sat");
 daysOfWeek.unshift("Sun");
 
+// Exercise 8.7 step 5: document.write(daysOfWeek + "<br>");
+
 document.write("<table border='1'>");
 document.write("<thead><tr>");
 for (var i = 0; i < daysOfWeek.length; i++) {

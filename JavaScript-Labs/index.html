@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Be+Vietnam+Pro:wght@400;500;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Cormorant+Garamond:wght@600;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -47,7 +47,7 @@
                 </div>
 
                 <div class="btns">
-                    <a class="btn pri" href="#labs">Xem 3 bài Lab</a>
+                    <a class="btn pri" href="#labs">Xem 3 bài Labs</a>
                     <a class="btn sec" href="https://github.com/plbngjc/PhamLeBaoNgoc/tree/main" target="_blank"
                         rel="noopener">GitHub cá nhân</a>
                 </div>
@@ -59,7 +59,7 @@
                     <span class="card-number">036/067</span>
                 </div>
                 <div class="profile-art">
-                    <img src="avt.png" alt="Ảnh đại diện Phạm Lê Bảo Ngọc">
+                    <img src="images/avt.png" alt="Ảnh đại diện Phạm Lê Bảo Ngọc">
                     <div class="art-caption">
                         <div class="eyebrow">Gà tập gõ phím</div>
                         <h2>No.1 SuperNuber</h2>
@@ -77,7 +77,6 @@
         <section id="intro">
             <div class="wrap">
                 <div class="mission">
-                    <div class="section-kicker">Mô tả nhiệm vụ · 01</div>
                     <h2>Mục tiêu của ba bài thực hành</h2>
                     <p>Mục tiêu của em khi làm ba bài Lab này là hiểu cách một trang web trả lời người dùng. HTML và CSS
                         chỉ cho trang web hình dạng; JavaScript mới cho nó hành vi, như kiểm tra biểu mẫu trước khi gửi,
@@ -91,75 +90,151 @@
             <div class="wrap">
                 <div class="section-heading">
                     <div>
-                        <h2>Chọn một lá bài</h2>
-                    </div>
-                    <p>Mỗi lá là một chặng khổ tu với PTUD</p>
-                </div>
-                <div class="labs">
-                    <article class="lab">
-                        <div class="lab-top"><span class="lab-badge" aria-hidden="true">01</span><small>Em bình
-                                thường</small></div>
-                        <h3>Lab 08</h3>
-                        <p>Cú pháp, biến, hàm, String, Date, Array, Object và làm việc với Console.</p>
-                        <a class="btn" href="Labs08/exercise.html">Mở Lab 08</a>
-                    </article>
-                    <article class="lab">
-                        <div class="lab-top"><span class="lab-badge" aria-hidden="true">02</span><small>Cũng
-                                quào</small></div>
-                        <h3>Lab 09</h3>
-                        <p>Chọn và thay đổi phần tử, xử lý sự kiện, làm việc với Form và kiểm tra dữ liệu.</p>
-                        <a class="btn" href="Labs09/lab09-walkthrough01.html">Mở Lab 09</a>
-                    </article>
-                    <article class="lab">
-                        <div class="lab-top"><span class="lab-badge" aria-hidden="true">03</span><small>Khó nha
-                                bro</small></div>
-                        <h3>Lab 10</h3>
-                        <p>Selectors, events, thao tác DOM, hiệu ứng animation và GET request với jqXHR.</p>
-                        <a class="btn" href="Labs10/lab10-walkthrough01.html">Mở Lab 10</a>
-                    </article>
-                </div>
-        </section>
-
-        <section id="learned" style="padding-top:0">
-            <div class="wrap">
-                <div class="section-heading">
-                    <div>
-                        <div class="section-kicker">Thẻ kỹ năng</div>
-                        <h2>Em đã học được gì?</h2>
+                        <h2>Chọn một lá bài kĩ năng bổ trợ cho nhân vật</h2>
                     </div>
                 </div>
-                <div class="tabs" role="tablist">
-                    <button class="tab" role="tab" id="t0" aria-controls="p0" aria-selected="true">Lab 08</button>
-                    <button class="tab" role="tab" id="t1" aria-controls="p1" aria-selected="false">Lab 09</button>
-                    <button class="tab" role="tab" id="t2" aria-controls="p2" aria-selected="false">Lab 10</button>
-                </div>
+                <div class="tcg-stage">
+                    <div class="lab-deck" role="tablist" aria-label="Chọn bài Lab">
+                        <button class="lab-choice is-active" type="button" role="tab" id="lab-choice-08"
+                            aria-controls="lab-panel-08" aria-selected="true" tabindex="0">
+                            <span class="lab-choice-number">Thường thôi</span>
+                            <span class="lab-choice-art" aria-hidden="true">
+                                <img src="images/card-JS.PNG" alt="">
+                            </span>
+                            <span class="lab-choice-title">Lab 08</span>
+                            <span class="lab-choice-type">NỀN TẢNG</span>
+                        </button>
+                        <button class="lab-choice" type="button" role="tab" id="lab-choice-09"
+                            aria-controls="lab-panel-09" aria-selected="false" tabindex="-1">
+                            <span class="lab-choice-number">Cũng quào</span>
+                            <span class="lab-choice-art" aria-hidden="true">
+                                <img src="images/card-DOM.png" alt="">
+                            </span>
+                            <span class="lab-choice-title">Lab 09</span>
+                            <span class="lab-choice-type">TƯƠNG TÁC</span>
+                        </button>
+                        <button class="lab-choice" type="button" role="tab" id="lab-choice-10"
+                            aria-controls="lab-panel-10" aria-selected="false" tabindex="-1">
+                            <span class="lab-choice-number">Khó nha bro</span>
+                            <span class="lab-choice-art" aria-hidden="true">
+                                <img src="images/card-jQ.png" alt="">
+                            </span>
+                            <span class="lab-choice-title">Lab 10</span>
+                            <span class="lab-choice-type">NÂNG CAO</span>
+                        </button>
+                    </div>
 
-                <div class="panel" role="tabpanel" id="p0" aria-labelledby="t0">
-                    <ul>
-                        <li>Biết nhúng mã JavaScript vào trang HTML và nhìn thấy kết quả ngay trong <b>Console</b> của
-                            trình duyệt.</li>
-                        <li>Phân biệt các kiểu dữ liệu và biết dùng <b>biến, hàm, điều kiện, vòng lặp</b> để giải bài
-                            toán nhỏ.</li>
-                        <li>Xử lý chuỗi, ngày giờ, mảng và đối tượng – những thứ cần khi hiển thị danh sách sản phẩm hay
-                            ngày giao hàng.</li>
-                    </ul>
-                </div>
-                <div class="panel" role="tabpanel" id="p1" aria-labelledby="t1" hidden>
-                    <ul>
-                        <li>Dùng <b>DOM</b> để tìm phần tử, đọc và sửa nội dung, thuộc tính, giao diện.</li>
-                        <li>Tạo, thêm và xóa phần tử bằng mã, ví dụ thêm một dòng vào giỏ hàng.</li>
-                        <li>Bắt sự kiện <b>click, mouseover, mouseout</b> và kiểm tra dữ liệu Form trước khi gửi.</li>
-                        <li>Dùng công cụ dành cho nhà phát triển để theo dõi và gỡ lỗi sự kiện.</li>
-                    </ul>
-                </div>
-                <div class="panel" role="tabpanel" id="p2" aria-labelledby="t2" hidden>
-                    <ul>
-                        <li>Nạp <b>jQuery</b> qua CDN hoặc file cục bộ và dùng Selectors để viết gọn hơn so với
-                            JavaScript thuần.</li>
-                        <li>Xử lý sự kiện và thao tác DOM chỉ với vài dòng.</li>
-                        <li>Tạo hiệu ứng (ẩn/hiện, trượt, mờ dần) để trang sinh động hơn.</li>
-                        <li>Gửi <b>GET request</b> và đọc kết quả qua jqXHR – bước đầu để lấy dữ liệu từ máy chủ.</li>
-                    </ul>
+                    <div class="lab-detail">
+                        <div class="learned-heading" id="learned">
+                            <div>
+                                <div class="section-kicker">Thẻ kỹ năng</div>
+                                <h2>Em đã học được gì?</h2>
+                            </div>
+                        </div>
+                        <div class="lab-panels">
+                            <article class="lab-panel" role="tabpanel" id="lab-panel-08" aria-labelledby="lab-choice-08"
+                                tabindex="0">
+                                <div class="lab-flip-scene">
+                                    <div class="lab-flip-card">
+                                        <section class="flip-face flip-front" aria-hidden="false">
+                                            <div class="flip-card-meta"><span>Nhiệm vụ 01</span><span>LAB 08</span>
+                                            </div>
+                                            <h3>Khởi tạo hành trình JavaScript</h3>
+                                            <p>Làm quen với cú pháp, biến, hàm, String, Date, Array, Object và cách
+                                                kiểm tra kết quả trong Console.</p>
+                                            <a class="btn pri" href="Labs08/exercise.html">Mở Lab 08</a>
+                                            <button class="flip-toggle" type="button" aria-expanded="false">
+                                                Xem kỹ năng
+                                            </button>
+                                        </section>
+                                        <section class="flip-face flip-back" aria-hidden="true" inert>
+                                            <div class="flip-card-meta"><span>ĐÃ MỞ KHÓA</span><span>✦ 01</span></div>
+                                            <h3>Em đã học được gì?</h3>
+                                            <ul>
+                                                <li>Biết nhúng mã JavaScript vào trang HTML và nhìn thấy kết quả ngay
+                                                    trong <b>Console</b> của trình duyệt.</li>
+                                                <li>Phân biệt các kiểu dữ liệu và biết dùng <b>biến, hàm, điều kiện,
+                                                        vòng lặp</b> để giải bài toán nhỏ.</li>
+                                                <li>Xử lý chuỗi, ngày giờ, mảng và đối tượng – những thứ cần khi hiển
+                                                    thị danh sách sản phẩm hay ngày giao hàng.</li>
+                                            </ul>
+                                            <button class="flip-toggle" type="button" aria-expanded="false">
+                                                ↶ Xem nhiệm vụ
+                                            </button>
+                                        </section>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="lab-panel" role="tabpanel" id="lab-panel-09" aria-labelledby="lab-choice-09"
+                                tabindex="0" hidden>
+                                <div class="lab-flip-scene">
+                                    <div class="lab-flip-card">
+                                        <section class="flip-face flip-front" aria-hidden="false">
+                                            <div class="flip-card-meta"><span>Nhiệm vụ 02</span><span>LAB 09</span>
+                                            </div>
+                                            <h3>Đánh thức giao diện với DOM</h3>
+                                            <p>Chọn và thay đổi phần tử, xử lý sự kiện, làm việc với Form và kiểm tra
+                                                dữ liệu trước khi gửi.</p>
+                                            <a class="btn pri" href="Labs09/lab09-walkthrough01.html">Mở Lab 09</a>
+                                            <button class="flip-toggle" type="button" aria-expanded="false">
+                                                Xem kỹ năng
+                                            </button>
+                                        </section>
+                                        <section class="flip-face flip-back" aria-hidden="true" inert>
+                                            <div class="flip-card-meta"><span>ĐÃ MỞ KHÓA</span><span>✦ 02</span></div>
+                                            <h3>Em đã học được gì?</h3>
+                                            <ul>
+                                                <li>Dùng <b>DOM</b> để tìm phần tử, đọc và sửa nội dung, thuộc tính,
+                                                    giao diện.</li>
+                                                <li>Tạo, thêm và xóa phần tử bằng mã, ví dụ thêm một dòng vào giỏ
+                                                    hàng.</li>
+                                                <li>Bắt sự kiện <b>click, mouseover, mouseout</b> và kiểm tra dữ liệu
+                                                    Form trước khi gửi.</li>
+                                                <li>Dùng công cụ dành cho nhà phát triển để theo dõi và gỡ lỗi sự
+                                                    kiện.</li>
+                                            </ul>
+                                            <button class="flip-toggle" type="button" aria-expanded="false">
+                                                ↶ Xem nhiệm vụ
+                                            </button>
+                                        </section>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="lab-panel" role="tabpanel" id="lab-panel-10" aria-labelledby="lab-choice-10"
+                                tabindex="0" hidden>
+                                <div class="lab-flip-scene">
+                                    <div class="lab-flip-card">
+                                        <section class="flip-face flip-front" aria-hidden="false">
+                                            <div class="flip-card-meta"><span>Nhiệm vụ 03</span><span>LAB 10</span>
+                                            </div>
+                                            <h3>Điều khiển dữ liệu với jQuery</h3>
+                                            <p>Dùng Selectors và events, thao tác DOM, tạo hiệu ứng animation và gửi
+                                                GET request với jqXHR.</p>
+                                            <a class="btn pri" href="Labs10/lab10-walkthrough01.html">Mở Lab 10</a>
+                                            <button class="flip-toggle" type="button" aria-expanded="false">
+                                                Xem kỹ năng
+                                            </button>
+                                        </section>
+                                        <section class="flip-face flip-back" aria-hidden="true" inert>
+                                            <div class="flip-card-meta"><span>ĐÃ MỞ KHÓA</span><span>✦ 03</span></div>
+                                            <h3>Em đã học được gì?</h3>
+                                            <ul>
+                                                <li>Nạp <b>jQuery</b> qua CDN hoặc file cục bộ và dùng Selectors để
+                                                    viết gọn hơn so với JavaScript thuần.</li>
+                                                <li>Xử lý sự kiện và thao tác DOM chỉ với vài dòng.</li>
+                                                <li>Tạo hiệu ứng (ẩn/hiện, trượt, mờ dần) để trang sinh động hơn.</li>
+                                                <li>Gửi <b>GET request</b> và đọc kết quả qua jqXHR – bước đầu để lấy
+                                                    dữ liệu từ máy chủ.</li>
+                                            </ul>
+                                            <button class="flip-toggle" type="button" aria-expanded="false">
+                                                ↶ Xem nhiệm vụ
+                                            </button>
+                                        </section>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -167,15 +242,23 @@
         <section id="reflection">
             <div class="wrap">
                 <div class="reflect">
-                    <div class="section-kicker">Hành trình người chơi</div>
-                    <h2>Tự đánh giá</h2>
-                    <p>Sau ba bài Lab, em nắm được cách JavaScript điều khiển trang web: lưu dữ liệu bằng biến và mảng,
-                        chọn phần tử bằng DOM, bắt sự kiện và cập nhật giao diện tức thì. em thấy Lab 09 hữu ích nhất vì
-                        nó gần với website thật; ngược lại Lab 10 làm em vất vả hơn ở phần GET request do phải hiểu dữ
-                        liệu trả về từ máy chủ.</p>
-                    <p>Em có thể áp dụng để kiểm tra biểu mẫu đăng ký, cập nhật số lượng và tổng tiền trong giỏ hàng,
-                        lọc sản phẩm và tạo hiệu ứng khi khách xem hàng. em cần luyện thêm cách tổ chức mã cho gọn, xử
-                        lý lỗi và làm việc với dữ liệu thực.</p>
+                    <div class="reflect-copy">
+                        <h2>Tự đánh giá</h2>
+                        <p>Sau ba bài Lab, em nắm được cách JavaScript điều khiển trang web: lưu dữ liệu bằng biến và
+                            mảng, chọn phần tử bằng DOM, bắt sự kiện và cập nhật giao diện tức thì. Em thấy Lab 09 hữu
+                            ích nhất vì nó gần với website thật; ngược lại Lab 10 làm em vất vả hơn ở phần GET request
+                            do phải hiểu dữ liệu trả về từ máy chủ.</p>
+                        <p>Em có thể áp dụng để kiểm tra biểu mẫu đăng ký, cập nhật số lượng và tổng tiền trong giỏ
+                            hàng, lọc sản phẩm và tạo hiệu ứng khi khách xem hàng. Em cần luyện thêm cách tổ chức mã
+                            cho gọn, xử lý lỗi và làm việc với dữ liệu thực.</p>
+                    </div>
+                    <div class="gameplay-media">
+                        <span class="media-label">Một chút nghiện...</span>
+                        <video class="gameplay-video" controls autoplay muted loop playsinline preload="auto">
+                            <source src="./vid.mp4" type="video/mp4">
+                            Trình duyệt của bạn không hỗ trợ video.
+                        </video>
+                    </div>
                 </div>
             </div>
         </section>
@@ -188,18 +271,75 @@
 
     <script>
         (() => {
-            const tabs = document.querySelectorAll('.tab');
+            const choices = Array.from(document.querySelectorAll('.lab-choice'));
+            const panels = Array.from(document.querySelectorAll('.lab-panel'));
 
-            tabs.forEach(function (t, i) {
-                t.addEventListener('click', function () {
-                    tabs.forEach(function (x, j) {
-                        x.setAttribute('aria-selected', i === j);
-                        document.getElementById('p' + j).hidden = (i !== j);
+            function selectLab(index) {
+                choices.forEach(function (choice, choiceIndex) {
+                    const selected = choiceIndex === index;
+                    choice.setAttribute('aria-selected', String(selected));
+                    choice.tabIndex = selected ? 0 : -1;
+                    choice.classList.toggle('is-active', selected);
+                    panels[choiceIndex].hidden = !selected;
+                });
+
+                const activeCard = panels[index].querySelector('.lab-flip-card');
+                activeCard.classList.remove('is-flipped');
+                const front = activeCard.querySelector('.flip-front');
+                const back = activeCard.querySelector('.flip-back');
+                front.setAttribute('aria-hidden', 'false');
+                back.setAttribute('aria-hidden', 'true');
+                front.inert = false;
+                back.inert = true;
+                activeCard.querySelectorAll('.flip-toggle').forEach(function (button) {
+                    button.setAttribute('aria-expanded', 'false');
+                });
+            }
+
+            choices.forEach(function (choice, index) {
+                choice.addEventListener('click', function () {
+                    selectLab(index);
+                });
+                choice.addEventListener('keydown', function (event) {
+                    let nextIndex = index;
+                    if (event.key === 'ArrowRight' || event.key === 'ArrowDown') {
+                        nextIndex = (index + 1) % choices.length;
+                    } else if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') {
+                        nextIndex = (index - 1 + choices.length) % choices.length;
+                    } else if (event.key === 'Home') {
+                        nextIndex = 0;
+                    } else if (event.key === 'End') {
+                        nextIndex = choices.length - 1;
+                    } else {
+                        return;
+                    }
+                    event.preventDefault();
+                    selectLab(nextIndex);
+                    choices[nextIndex].focus();
+                });
+            });
+
+            panels.forEach(function (panel) {
+                const card = panel.querySelector('.lab-flip-card');
+                const front = card.querySelector('.flip-front');
+                const back = card.querySelector('.flip-back');
+
+                card.querySelectorAll('.flip-toggle').forEach(function (button) {
+                    button.addEventListener('click', function () {
+                        const flipped = card.classList.toggle('is-flipped');
+                        front.setAttribute('aria-hidden', String(flipped));
+                        back.setAttribute('aria-hidden', String(!flipped));
+                        front.inert = flipped;
+                        back.inert = !flipped;
+                        card.querySelectorAll('.flip-toggle').forEach(function (toggle) {
+                            toggle.setAttribute('aria-expanded', String(flipped));
+                        });
                     });
                 });
             });
         })();
     </script>
+    <script src="./index.js"></script>
 </body>
 
 </html>

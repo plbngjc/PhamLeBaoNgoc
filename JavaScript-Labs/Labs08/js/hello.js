@@ -1,3 +1,4 @@
+// Exercise 8.5 error example: documment.write("this text was written from JS");
 document.write("this text was written from JS");
 
 var count = 1;

@@ -1,4 +1,4 @@
-function Order(product, price, quantity) {
+function order(product, price, quantity) {
     this.product = product;
     this.price = price;
     this.quantity = quantity;
@@ -13,7 +13,8 @@ function Order(product, price, quantity) {
     };
 }
 
-var example1 = new Order("Self Portrait in a Straw Hat", 15, 2);
-var example2 = new Order("Untitled #23", 10, 4);
+var example1 = new order("Self Portrait in a Straw Hat", 15, 2);
+var example2 = new order("Untitled #23", 10, 4);
+
 example1.output();
 example2.output();
