@@ -542,7 +542,7 @@
         .lab-choice.is-active,
         .lab-choice:hover {
             z-index: 3;
-            transform: translateY(-15px) rotate(0) scale(1.045);
+            transform: translateY(-15px) rotate(0) scale(1.02);
             box-shadow: 0 22px 35px rgba(0, 0, 0, .72), 0 0 22px color-mix(in srgb, var(--accent) 22%, transparent)
         }
 
@@ -794,7 +794,7 @@
 .gameplay-media {
     position: relative;
     min-width: 0;
-    min-height: 230px;
+    min-height: 0;
     aspect-ratio: 16 / 9;
     overflow: hidden;
     border: 1px solid rgba(229, 194, 122, .6);
