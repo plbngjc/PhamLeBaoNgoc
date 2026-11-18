@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hôm nay học gì? - Phạm Lê Bảo Ngọc</title>
+    <style>
+        :root {
+            --bg: #f4f6fb;
+            --card: #ffffff;
+            --text: #1d2433;
+            --muted: #5b6577;
+            --accent: #0b6e8a;
+            --border: #dde3ee;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #12161f;
+                --card: #1b212d;
+                --text: #e8ecf4;
+                --muted: #9aa5b8;
+                --accent: #4cc2e0;
+                --border: #2c3445;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--accent);
+            color: #fff;
+            padding: 32px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0 0 8px;
+            font-size: clamp(1.5rem, 4vw, 2.2rem);
+        }
+
+        header p {
+            margin: 0;
+            opacity: .92;
+        }
+
+        main {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 24px 16px 48px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 16px;
+        }
+
+        .card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+        }
+
+        .num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: var(--accent);
+            color: #fff;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .card h2 {
+            margin: 0 0 8px;
+            font-size: 1.15rem;
+        }
+
+        .card p,
+        .card li {
+            color: var(--muted);
+            margin: 4px 0;
+        }
+
+        .card ul {
+            padding-left: 20px;
+            margin: 8px 0 0;
+        }
+
+        .logos {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 12px;
+        }
+
+        .logo {
+            border: 1px dashed var(--accent);
+            color: var(--accent);
+            border-radius: 8px;
+            padding: 6px 14px;
+            font-weight: 600;
+            font-size: .9rem;
+        }
+
+        footer {
+            text-align: center;
+            color: var(--muted);
+            font-size: .9rem;
+            padding: 0 16px 32px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <p>Phạm Lê Bảo Ngọc &middot; MSSV: 31241027164</p>
+        <h1>Hôm nay học gì thế=D?</h1>
+    </header>
+
+    <main>
+        <div class="grid">
+            <section class="card">
+                <span class="num">1</span>
+                <h2>Bai1.html và GitPage</h2>
+                <p>Viết trang web đầu tiên (Bai1.html) và đưa lên GitHub Pages để có đường link xem trực tiếp trên mạng.
+                </p>
+            </section>
+
+            <section class="card">
+                <span class="num">2</span>
+                <h2>Game Dino</h2>
+                <p>Chỉnh sửa code trò chơi khủng long:</p>
+                <ul>
+                    <li>Chỉnh speed lên 100</li>
+                    <li>Chỉnh lại jump</li>
+                </ul>
+            </section>
+
+            <section class="card">
+                <span class="num">3</span>
+                <h2>Tạo responsive</h2>
+                <p>Làm trang web hiển thị tốt trên cả máy tính, máy tính bảng và điện thoại.</p>
+            </section>
+
+            <section class="card">
+                <span class="num">4</span>
+                <h2>Phần có ảnh logo</h2>
+                <p>Chèn và trình bày phần có ảnh logo của:</p>
+                <div class="logos">
+                    <span class="logo">UEH</span>
+                    <span class="logo">Trường CTD</span>
+                    <span class="logo">Khoa BIT</span>
+                </div>
+            </section>
+        </div>
+    </main>
+
+</body>
+
+</html>
