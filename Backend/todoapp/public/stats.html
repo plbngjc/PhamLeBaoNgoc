@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f7fb">
+  <title>Thống kê | Việc của tôi</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="Việc của tôi - Trang chủ">
+        <span class="brand-mark">✓</span><span>việc<span class="brand-accent">của</span>tôi</span>
+      </a>
+      <nav class="main-nav" aria-label="Điều hướng chính">
+        <a class="nav-link" href="/">Hôm nay</a>
+        <a class="nav-link active" href="/stats.html">Thống kê</a>
+      </nav>
+      <a class="topbar-back" href="/">← Danh sách task</a>
+    </header>
+    <main>
+      <section class="welcome-row stats-welcome">
+        <div><p class="eyebrow">NHÌN LẠI HÀNH TRÌNH</p><h1>Tổng quan <span class="heading-dot">.</span></h1><p class="subtitle">Mỗi việc hoàn thành là một bước tiến.</p></div>
+        <div class="welcome-actions">
+          <button class="button button-quiet" id="mockButton" type="button">✦ Nạp data mock</button>
+          <button class="button button-danger-outline" id="clearButton" type="button">Xóa toàn bộ</button>
+        </div>
+      </section>
+
+      <section class="stats-grid" id="summaryCards" aria-label="Tổng quan"></section>
+      <div class="analytics-grid">
+        <section class="panel chart-panel">
+          <div class="panel-heading"><div><p class="eyebrow">NHỊP ĐỘ CỦA BẠN</p><h2>Task trong 7 ngày gần nhất</h2></div><span class="panel-icon">↗</span></div>
+          <div class="bar-chart" id="weekChart" aria-label="Biểu đồ số task theo ngày"></div>
+        </section>
+        <section class="panel priority-panel">
+          <div class="panel-heading"><div><p class="eyebrow">PHÂN BỔ</p><h2>Theo mức ưu tiên</h2></div><span class="panel-icon">◈</span></div>
+          <div class="breakdown-list" id="priorityBreakdown"></div>
+        </section>
+        <section class="panel category-panel">
+          <div class="panel-heading"><div><p class="eyebrow">CÁC MẢNG CÔNG VIỆC</p><h2>Theo nhóm</h2></div><span class="panel-icon">▦</span></div>
+          <div class="breakdown-list" id="categoryBreakdown"></div>
+        </section>
+      </div>
+      <p class="page-footnote">Từng bước nhỏ, mỗi ngày một tốt hơn <span>✦</span></p>
+    </main>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </div>
+  <script src="/js/stats.js" defer></script>
+</body>
+</html>

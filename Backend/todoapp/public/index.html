@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f7fb">
+  <title>Hôm nay | Việc của tôi</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="Việc của tôi - Trang chủ">
+        <span class="brand-mark">✓</span><span>việc<span class="brand-accent">của</span>tôi</span>
+      </a>
+      <nav class="main-nav" aria-label="Điều hướng chính">
+        <a class="nav-link active" href="/">Hôm nay</a>
+        <a class="nav-link" href="/stats.html">Thống kê</a>
+      </nav>
+      <div class="topbar-date" id="headerDate"></div>
+    </header>
+
+    <main>
+      <section class="welcome-row">
+        <div>
+          <p class="eyebrow">KHÔNG GIAN CỦA BẠN</p>
+          <h1>Việc cần làm <span class="heading-dot">.</span></h1>
+          <p class="subtitle" id="todayLabel"></p>
+        </div>
+        <div class="welcome-actions">
+          <button class="button button-quiet" id="allTasksButton" type="button">Xem tất cả task <span aria-hidden="true">→</span></button>
+          <button class="button button-primary" id="addTaskButton" type="button"><span class="button-plus">+</span> Thêm task</button>
+        </div>
+      </section>
+
+      <section class="list-card">
+        <div class="list-toolbar">
+          <div class="list-title-wrap">
+            <h2 id="listHeading">Hôm nay</h2>
+            <span class="task-count" id="taskCount">0</span>
+          </div>
+          <div class="filters">
+            <label class="search-box">
+              <span class="search-icon" aria-hidden="true">⌕</span>
+              <input id="searchInput" type="search" placeholder="Tìm task..." aria-label="Tìm task">
+            </label>
+            <select id="statusFilter" aria-label="Lọc theo trạng thái">
+              <option value="all">Mọi trạng thái</option>
+              <option value="pending">Chưa hoàn thành</option>
+              <option value="done">Đã hoàn thành</option>
+            </select>
+            <select id="priorityFilter" aria-label="Lọc theo mức ưu tiên">
+              <option value="">Mọi ưu tiên</option>
+              <option value="high">Ưu tiên cao</option>
+              <option value="medium">Ưu tiên vừa</option>
+              <option value="low">Ưu tiên thấp</option>
+            </select>
+          </div>
+        </div>
+        <div class="task-list" id="taskList" aria-live="polite"></div>
+      </section>
+      <p class="page-footnote">Từng bước nhỏ, mỗi ngày một tốt hơn <span>✦</span></p>
+    </main>
+  </div>
+
+  <dialog class="task-dialog" id="taskDialog">
+    <form id="taskForm" class="task-form">
+      <div class="dialog-heading">
+        <div><p class="eyebrow">QUẢN LÝ CÔNG VIỆC</p><h2 id="dialogTitle">Thêm task mới</h2></div>
+        <button class="icon-button dialog-close" type="button" id="closeDialog" aria-label="Đóng">×</button>
+      </div>
+      <input type="hidden" id="taskId">
+      <label class="field-label" for="titleInput">Tên task <span>*</span></label>
+      <input class="text-field" id="titleInput" name="title" maxlength="200" required placeholder="Bạn cần hoàn thành việc gì?">
+      <div class="form-grid">
+        <div>
+          <label class="field-label" for="dueDateInput">Ngày đến hạn</label>
+          <input class="text-field" id="dueDateInput" name="due_date" type="date">
+        </div>
+        <div>
+          <label class="field-label" for="priorityInput">Mức ưu tiên</label>
+          <select class="text-field" id="priorityInput" name="priority">
+            <option value="high">Cao</option>
+            <option value="medium" selected>Vừa</option>
+            <option value="low">Thấp</option>
+          </select>
+        </div>
+      </div>
+      <label class="field-label" for="categoryInput">Nhóm</label>
+      <input class="text-field" id="categoryInput" name="category" maxlength="80" placeholder="Ví dụ: Công việc, Cá nhân">
+      <p class="form-error" id="formError" role="alert"></p>
+      <div class="dialog-actions">
+        <button class="button button-quiet" type="button" id="cancelDialog">Hủy</button>
+        <button class="button button-primary" type="submit" id="saveTaskButton">Lưu task</button>
+      </div>
+    </form>
+  </dialog>
+  <script src="/js/app.js" defer></script>
+</body>
+</html>
