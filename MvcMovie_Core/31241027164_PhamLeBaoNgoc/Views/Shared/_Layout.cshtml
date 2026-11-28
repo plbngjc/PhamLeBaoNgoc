@@ -1,0 +1,212 @@
+﻿@{
+    var ctrl = ViewContext.RouteData.Values["controller"]?.ToString();
+    var act = ViewContext.RouteData.Values["action"]?.ToString();
+    // Trang chủ = Movies/Index (route mặc định) hoặc Home/Index
+    var isHome = (ctrl == "Movies" || ctrl == "Home") && act == "Index";
+}
+<!DOCTYPE html>
+<html lang="vi" data-bs-theme="dark">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - _31241027164_PhamLeBaoNgoc</title>
+    <script type="importmap"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Cormorant+Garamond:wght@600;700;800&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/landing.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/_31241027164_PhamLeBaoNgoc.styles.css" asp-append-version="true" />
+</head>
+
+<body class="@(isHome ? "is-home" : "is-inner")">
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+    <header class="site-header" id="siteHeader">
+        <nav class="navbar navbar-expand-sm navbar-dark site-nav">
+            <div class="container-fluid px-md-4">
+                <a class="navbar-brand brand" asp-area="" asp-controller="Home" asp-action="Index">
+                    <span class="brand-mark" aria-hidden="true">▶</span> MvcMovie_Core
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+
+                    <partial name="_LoginPartial" />
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    @if (isHome)
+    {
+        <!-- ================= LANDING  ================= -->
+        <section class="hero" id="top">
+            <div class="hero-bg" aria-hidden="true">
+                <span class="orb orb-a" data-speed="0.18"></span>
+                <span class="orb orb-b" data-speed="-0.12"></span>
+                <span class="film-strip strip-l" data-speed="0.25"></span>
+                <span class="film-strip strip-r" data-speed="-0.2"></span>
+                <span class="grain"></span>
+            </div>
+            <div class="marquee" aria-hidden="true">
+                <div class="marquee-track">
+                    <span>Hành động</span><span>Viễn tưởng</span><span>Tình cảm</span><span>Kinh dị</span><span>Hoạt
+                    hình</span><span>Hài hước</span><span>Phiêu lưu</span><span>Tâm lý</span>
+                    <span>Hành động</span><span>Viễn tưởng</span><span>Tình cảm</span><span>Kinh dị</span><span>Hoạt
+                    hình</span><span>Hài hước</span><span>Phiêu lưu</span><span>Tâm lý</span>
+                </div>
+            </div>
+
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <h1 class="hero-title">
+                        <span class="line"><span>Phim hay,</span></span>
+                        <span class="line"><span>đúng <em>gu</em>,</span></span>
+                        <span class="line"><span>mua ngay.</span></span>
+                    </h1>
+                    <p class="hero-lead reveal">
+                        Chọn phim, thêm vào giỏ,
+                        thanh toán gọn trong vài bước — mọi thứ làm bằng ASP.NET Core MVC.
+                    </p>
+                    <div class="hero-cta reveal">
+                        <a class="btn-gold" href="#phim">Xem phim đang chiếu</a>
+                        <a class="btn-ghost" href="#hanh-trinh">Khám phá suất chiếu</a>
+                    </div>
+
+                </div>
+
+                <aside class="me-card tilt reveal" aria-label="Thẻ hồ sơ Phạm Lê Bảo Ngọc">
+                    <div class="me-card-head"><span>Hồ sơ</span><span>036/067</span></div>
+                    <div class="me-photo">
+                        <img src="~/images/avt.png" alt="Ảnh đại diện Phạm Lê Bảo Ngọc" />
+                        <div class="me-photo-cap">
+                            <small>Gà tập gõ phím</small>
+                            <strong>No.1 SuperNuber</strong>
+                        </div>
+                    </div>
+                    <dl class="me-info">
+                        <dt>Họ và tên</dt>
+                        <dd>Phạm Lê Bảo Ngọc</dd>
+                        <dt>MSSV</dt>
+                        <dd>31241027164</dd>
+                        <dt>Lớp học phần</dt>
+                        <dd>Phát triển ứng dụng TMĐT</dd>
+                    </dl>
+                    <div class="me-tags"><span>ASP.NET Core</span><span>MVC</span><span>SQL Server</span></div>
+                </aside>
+            </div>
+        </section>
+
+        <!-- Cảnh cuộn "tách lớp"  -->
+        <section class="journey" id="hanh-trinh" data-journey>
+            <div class="journey-pin">
+                <div class="journey-head">
+                    <h2 class="journey-title" data-journey-title>Một cuộn phim trông đơn giản.</h2>
+                    <p class="journey-text" data-journey-text>Nhưng bên trong là nhiều lớp chồng lên nhau, mỗi lớp một nhiệm
+                        vụ. Cuộn xuống để tách cuộn phim ra từng lớp.</p>
+                        <ol class="journey-steps" data-journey-steps>
+                            <li class="on">Mở đầu</li>
+                            <li>Màn hình</li>
+                            <li>Hình ảnh</li>
+                            <li>Âm thanh</li>
+                            <li>Khán giả</li>
+                        </ol>
+                    </div>
+                    <div class="reel-stage" aria-hidden="true">
+                        <svg class="reel" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                            <g class="layer l5">
+                                <circle cx="200" cy="200" r="176" fill="#15110c" stroke="#e5c27a" stroke-width="2" />
+                                <g fill="#0b0b09" stroke="#55432a" stroke-width="1.5">
+                                    <circle cx="200" cy="86" r="26" />
+                                    <circle cx="299" cy="143" r="26" />
+                                    <circle cx="299" cy="257" r="26" />
+                                    <circle cx="200" cy="314" r="26" />
+                                    <circle cx="101" cy="257" r="26" />
+                                    <circle cx="101" cy="143" r="26" />
+                                </g>
+                            </g>
+                            <g class="layer l4">
+                                <circle cx="200" cy="200" r="132" fill="none" stroke="#63b7ae" stroke-width="10"
+                                        stroke-dasharray="3 9" opacity=".85" />
+                                <circle cx="200" cy="200" r="120" fill="#1d1710" stroke="#55432a" stroke-width="2" />
+                            </g>
+                            <g class="layer l3">
+                                <circle cx="200" cy="200" r="96" fill="#0f2b29" stroke="#63b7ae" stroke-width="2" />
+                                <path d="M200 120 L200 280 M120 200 L280 200" stroke="#63b7ae" stroke-width="1" opacity=".5" />
+                                <polygon points="178,166 178,234 238,200" fill="#63b7ae" opacity=".9" />
+                            </g>
+                            <g class="layer l2">
+                                <circle cx="200" cy="200" r="58" fill="#e5c27a" />
+                                <circle cx="200" cy="200" r="46" fill="none" stroke="#211808" stroke-width="2"
+                                        stroke-dasharray="6 6" />
+                            </g>
+                            <g class="layer l1">
+                                <circle cx="200" cy="200" r="20" fill="#0b0b09" stroke="#211808" stroke-width="3" />
+                                <circle cx="200" cy="200" r="7" fill="#e5c27a" />
+                            </g>
+                        </svg>
+                        <div class="reel-glow"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="steps-section">
+                <div class="container">
+                    <div class="section-head reveal">
+                        <div class="eyebrow">Quy trình mua vé</div>
+                    </div>
+                    <div class="steps-grid">
+                        <article class="step-card reveal"><span class="step-no">01</span>
+                            <h3>Chọn phim</h3>
+                            <p>Xem poster, thể loại, xếp hạng và giá ngay trên lưới phim bên dưới.</p>
+                        </article>
+                        <article class="step-card reveal"><span class="step-no">02</span>
+                            <h3>Thêm vào giỏ</h3>
+                            <p>Bấm <b>Mua</b>, giỏ hàng cập nhật trên thanh menu bằng Session.</p>
+                        </article>
+                        <article class="step-card reveal"><span class="step-no">03</span>
+                            <h3>Thanh toán</h3>
+                            <p>Điền thông tin giao nhận và nhận ngay email xác nhận thông tin.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <div class="section-head container reveal" id="phim-head">
+                <div class="eyebrow">Đang chiếu</div>
+                <h2>Chọn phim của bạn.</h2>
+            </div>
+        }
+
+        <div class="container">
+            <main role="main" class="pb-3 page-body" id="phim">
+                @RenderBody()
+            </main>
+        </div>
+
+        <footer class="site-footer">
+            <div class="container">
+                &copy; @DateTime.Now.Year – 31241027164 – Phạm Lê Bảo Ngọc
+            </div>
+        </footer>
+
+        @if (isHome)
+        {
+            <a href="#top" class="to-top" id="toTop" aria-label="Lên đầu trang">↑</a>
+        }
+
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+        <script src="~/js/landing.js" asp-append-version="true"></script>
+        @await RenderSectionAsync("Scripts", required: false)
+    </body>
+
+</html>
